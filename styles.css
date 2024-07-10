@@ -17,7 +17,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #333, #555);
+    background: linear-gradient(135deg, #007bff, #00bfff);
     color: #fff;
     text-align: center;
     padding: 4rem 0;
@@ -28,24 +28,24 @@ header {
 }
 
 header:hover {
-    background: linear-gradient(135deg, #555, #777);
+    background: linear-gradient(135deg, #00bfff, #007bff);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
     letter-spacing: 1px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0;
     font-style: italic;
 }
 
 /* Navigation Styles */
 nav {
-    background-color: #444;
+    background-color: #333;
     color: #fff;
     margin-bottom: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -74,8 +74,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f4f4f4;
-    border-bottom: 2px solid #f4f4f4;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
 /* Main Content Styles */
@@ -92,12 +92,13 @@ section {
 }
 
 h2 {
-    color: #333;
+    color: #007bff;
     border-bottom: 2px solid #007bff;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     letter-spacing: 1px;
     position: relative;
+    font-size: 2.5rem;
 }
 
 h2:after {
@@ -105,7 +106,7 @@ h2:after {
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 50px;
+    width: 50%;
     height: 2px;
     background: #007bff;
     transition: width 0.3s ease;
@@ -116,31 +117,22 @@ h2:hover:after {
 }
 
 h3 {
-    color: #444;
+    color: #007bff;
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
 }
 
 .resume-section, .project {
     margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 3px solid #007bff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    background: #f9f9f9;
-    border-radius: 4px;
+    padding: 1.5rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .resume-section:hover, .project:hover {
     transform: translateY(-5px);
-}
-
-.project {
-    padding-left: 1.5rem;
-}
-
-.project h3 {
-    margin-top: 0;
 }
 
 .skills {
@@ -151,6 +143,29 @@ h3 {
 .skills li {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+    color: #444;
+}
+
+.skills i {
+    margin-right: 0.5rem;
+    color: #007bff;
+}
+
+
+.project h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #444;
 }
 
 .skills i {
@@ -160,7 +175,7 @@ h3 {
 
 /* Contact Section Styles */
 #contact {
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -168,6 +183,7 @@ h3 {
 
 #contact p {
     margin-bottom: 1rem;
+    color: #333;
 }
 
 #contact a {
@@ -177,7 +193,7 @@ h3 {
 }
 
 #contact a:hover {
-    color: #0056b3;
+    color: #00bfff;
 }
 
 #contact i {
@@ -194,10 +210,7 @@ footer {
     color: #fff;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-}
-
-footer p {
-    margin: 0;
+    font-size: 1.2rem;
 }
 
 /* Link Styles */
@@ -208,7 +221,7 @@ a {
 }
 
 a:hover {
-    color: #0056b3;
+    color: #00bfff;
 }
 
 /* Responsive Styles */
