@@ -24,6 +24,18 @@
           return scroll > position - windowHeight + 200;
         }
 
+        // Function to check scroll position and toggle header class
+        function checkScroll() {
+          var scrollPosition = $(window).scrollTop();
+          var header = $("header");
+
+          if (scrollPosition > 0) {
+            header.addClass("scrolled");
+          } else {
+            header.removeClass("scrolled");
+          }
+        }
+
         // Check initially on page load
         $(".fade-in").each(function () {
           if (checkInView(this)) {
@@ -31,19 +43,25 @@
           }
         });
 
-        // Check on scroll
+        // Check on scroll for fade-in elements and header
         $(window).scroll(function () {
           $(".fade-in").each(function () {
             if (checkInView(this)) {
               $(this).addClass("active");
             }
           });
+
+          // Check scroll position for header
+          checkScroll();
         });
+
+        // Check scroll position on load for header
+        checkScroll();
       });
     </script>
   </head>
   <body>
-    <header class="fade-in">
+    <header class="fade-in header-content">
       <div class="container">
         <h1>Guillaume Flamand</h1>
         <p>
