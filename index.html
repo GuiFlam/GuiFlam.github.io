@@ -13,9 +13,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Function to check if element is in view
+        function checkInView(element) {
+          var position = $(element).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          return scroll > position - windowHeight + 200;
+        }
+
+        // Check initially on page load
+        $(".fade-in").each(function () {
+          if (checkInView(this)) {
+            $(this).addClass("active");
+          }
+        });
+
+        // Check on scroll
+        $(window).scroll(function () {
+          $(".fade-in").each(function () {
+            if (checkInView(this)) {
+              $(this).addClass("active");
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body>
-    <header>
+    <header class="fade-in">
       <div class="container">
         <h1>Guillaume Flamand</h1>
         <p>
@@ -24,7 +52,7 @@
       </div>
     </header>
 
-    <nav>
+    <nav class="fade-in">
       <ul>
         <li><a href="#about">À propos de moi</a></li>
         <li><a href="#resume">CV</a></li>
@@ -34,14 +62,14 @@
     </nav>
 
     <main class="container">
-      <section id="about">
+      <section id="about" class="fade-in">
         <h2>À propos de moi</h2>
         <p>Blablabla</p>
       </section>
 
-      <section id="resume">
+      <section id="resume" class="fade-in">
         <h2>CV</h2>
-        <div class="resume-section">
+        <div class="resume-section fade-in">
           <h3>Éducation</h3>
           <p>
             - DEC en Sciences Informatiques et mathématiques - Collège
@@ -54,11 +82,11 @@
           <p>Blablabla</p>
           <!-- Tu peux ajouter d'autres détails si nécessaire -->
         </div>
-        <div class="resume-section">
+        <div class="resume-section fade-in">
           <h3>Expérience</h3>
           <p>Blablabla</p>
         </div>
-        <div class="resume-section">
+        <div class="resume-section fade-in">
           <h3>Compétences</h3>
           <ul class="skills">
             <li><i class="fas fa-code"></i>Programmation orientée objet</li>
@@ -67,7 +95,7 @@
             <li><i class="fas fa-laptop-code"></i>Développement web</li>
           </ul>
         </div>
-        <div class="resume-section">
+        <div class="resume-section fade-in">
           <h3>Languages de programmation</h3>
           <ul class="skills">
             <li><i class="fas fa-code"></i> JavaScript</li>
@@ -82,9 +110,9 @@
         </div>
       </section>
 
-      <section id="projects">
+      <section id="projects" class="fade-in">
         <h2>Projets</h2>
-        <div class="project">
+        <div class="project fade-in">
           <h3>Project Title 1</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
@@ -97,7 +125,7 @@
             Cupiditate distinctio laboriosam,
           </p>
         </div>
-        <div class="project">
+        <div class="project fade-in">
           <h3>Project Title 2</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
@@ -112,7 +140,7 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="fade-in">
         <h2>Me contacter</h2>
         <p>
           <i class="fas fa-envelope"></i> Email:
@@ -135,7 +163,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
       <div class="container">
         <p>&copy; 2024 Guillaume Flamand. Tous droits réservés.</p>
       </div>

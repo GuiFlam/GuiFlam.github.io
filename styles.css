@@ -131,12 +131,10 @@ h3 {
     background: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out; /* Adjusted transition timing */
 }
 
-.resume-section:hover, .project:hover {
-    transform: translateY(-5px);
-}
+
 
 .project h3 {
     margin-top: 0;
@@ -240,3 +238,13 @@ a:hover {
         padding: 1.5rem;
     }
 }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+  
