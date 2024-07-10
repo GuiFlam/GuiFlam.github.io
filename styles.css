@@ -40,8 +40,13 @@ header {
 
 /* Navigation Styles */
 /* Ajout de padding à gauche dans la navbar */
+/* Styles généraux pour la navbar */
+nav {
+    background-color: #333; /* Couleur de fond de la navbar */
+    text-align: center; /* Centrer le texte */
+}
+
 nav ul {
-    background-color: #434343;;
     list-style: none;
     padding: 0;
     display: flex;
@@ -51,21 +56,29 @@ nav ul {
 
 nav ul li {
     margin: 0 1rem;
-    padding-left: 1rem; /* Ajout de padding à gauche */
+    padding: 1rem 0; /* Padding vertical pour les liens */
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    padding: 1rem 0;
-    display: block;
     transition: color 0.3s, border-bottom 0.3s;
+    display: block;
+    padding: 0 10px; /* Padding horizontal pour les liens */
 }
 
 nav ul li a:hover {
     color: #007bff;
     border-bottom: 2px solid #007bff;
 }
+
+/* Media query pour ajustements mobiles */
+@media (max-width: 768px) {
+    nav ul li {
+        padding-left: 10px; /* Ajout de padding à gauche pour la version mobile */
+    }
+}
+
 
 
 /* Main Content Styles */
