@@ -1,9 +1,10 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
     color: #333;
 }
 
@@ -13,28 +14,36 @@ body {
     padding: 0 2rem;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #555);
     color: #fff;
     text-align: center;
     padding: 4rem 0;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 header h1 {
     font-size: 2.5rem;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 header p {
     font-size: 1.2rem;
     margin: 0;
+    font-style: italic;
 }
 
+/* Navigation Styles */
 nav {
     background-color: #444;
     color: #fff;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 nav ul {
@@ -54,18 +63,21 @@ nav ul li a {
     text-decoration: none;
     padding: 1rem 0;
     display: block;
-    transition: color 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 nav ul li a:hover {
     color: #f4f4f4;
+    border-bottom: 2px solid #f4f4f4;
 }
 
+/* Main Content Styles */
 main {
     background-color: #fff;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    border-radius: 8px;
 }
 
 section {
@@ -74,31 +86,47 @@ section {
 
 h2 {
     color: #333;
-    border-bottom: 2px solid #f4f4f4;
+    border-bottom: 2px solid #007bff;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
 
 h3 {
     color: #444;
     margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
 }
 
 .resume-section, .project {
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid #007bff;
 }
 
+.project {
+    padding-left: 1.5rem;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 2rem 0;
     background-color: #333;
     color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 footer p {
     margin: 0;
 }
 
+/* Link Styles */
 a {
     color: #007bff;
     text-decoration: none;
@@ -109,6 +137,7 @@ a:hover {
     color: #0056b3;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
